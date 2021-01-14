@@ -1,0 +1,162 @@
+:root {
+  --vermelho: #e50914;
+  --preto: #201f1ff5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* elementos base */
+
+body {
+  background: var(--preto);
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+header .container {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center; /* alinhamento vertical */
+  justify-content: flex-start ; /* alinhamento horizontal */
+}
+
+header .logo{
+  margin-left: 5px;
+  margin-right: 10px;
+
+  /* color: var(--vermelho);
+  font-family: 'Arial Black', Times;
+  font-size: 40px; */
+}
+
+header nav a {
+  text-decoration: none;
+  color: #aaa;
+  margin-left: 10px;
+}
+
+header nav a:hover {
+  color: rgba(255, 255, 255, 0.89);
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* filme principal */
+
+.filme-principal {  
+  background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url('/img/capa-emily.jpg');
+
+  height: 550px;
+  background-size: cover; /* imagem se alinha (cobre) a area da caixa */
+
+  display: flex;
+  flex-direction: column; /* posiciona os objetos um sobre o outro */
+  justify-content: center; /* alinhamento os objetos verticalmente */
+  align-items: flex-start; /* aqui alinha os objetos à esquerda */
+
+  /* justify-content e align-items sempre vão se posicionar dependendo da direção do flex-direction */
+}
+
+.filme-principal .descricao {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+.filme-principal .titulo {
+  margin-top: 15%;
+  font-size: 50px;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.botao-play {
+  background-color: white;
+  border: none;
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+
+  padding: 15px 30px;
+  margin-right: 15px;
+  border-radius: 3px;
+
+  cursor: pointer;
+  transition: .3s ease all;
+}
+
+.botao-play:hover {
+  background-color: rgb(196, 196, 196);
+  color: black;
+}
+
+.botao-play i{
+  margin-right: 8px;
+}
+
+.botao-more {
+  background-color: rgba(99, 99, 99, 0.8);
+  border: none;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+
+  padding: 15px 30px;
+  margin-right: 15px;
+  border-radius: 3px;
+
+  cursor: pointer;
+  transition: .3s ease all;
+}
+
+.botao-more:hover {
+  background-color: rgba(99, 99, 99, 0.5);
+}
+
+.botao-more i{
+  margin-right: 8px;
+}
+
+.container {
+  margin-left: 20px;
+}
+
+.filme-principal .container {
+  width: 70%;
+}
+
+/* carrosséis de filmes */
+
+.box-filme {
+  height: 100%;
+  width: 100%;
+  display: block;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+
+.box-filme:hover {
+  transform: scale(1.2);
+}
+
+p {
+  margin-bottom: 15px;
+  color: rgb(189, 188, 188);
+}
+
+.carrossel-series {
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+.carrossel-docs {
+  margin-top: 25px;
+  margin-left: 25px;
+}

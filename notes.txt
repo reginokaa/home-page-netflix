@@ -1,0 +1,50 @@
+#HTML
+nav → menus de navegação
+** sempre lembrar de linkar o css / js no html **
+
+classes "wrapper" - container
+______
+
+#CSS
+
+google fonts
+fontes com nomes compostos vão dentro de ''
+
+variáveis no css: :root
+ideal salvar cores padrão em variáveis p/facilitar possíveis alterações
+
+flexbox (display: flex): tendência a jogar todos os objetos para linha (row)
+
+reset css:
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+align-items: alinhamento vertical 
+justify-content:  alinhamento horizontal 
+
+media query é o que trata o tamanho da tela
+criar arquivo separado p/responsividade
+
+______
+
+#VSCODE
+alt + shift + ↕
+
+tag.nome_da_classe → cria automático
+
+
+
+DICA DO PROF: 
+criar mockup antes codar
+definir todo o código antes de procurar elementos de estilo externos
+posicionamento fluido em %
+TMDB para imagens/sinopses de filmes e séries
+
+toda vez que tiver $ em códigos JS, geralmente, é JQuery
+
+______
+
+OWL CAROUSEL 2
