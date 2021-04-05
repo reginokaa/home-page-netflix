@@ -1,3 +1,4 @@
+/* variáveis */
 :root {
   --vermelho: #e50914;
   --preto: #201f1ff5;
@@ -10,24 +11,21 @@
 }
 
 /* elementos base */
-
 body {
   background: var(--preto);
   font-family: 'Roboto', sans-serif;
-  color: white;
 }
 
 header .container {
   margin-bottom: 5px;
   display: flex;
-  align-items: center; /* alinhamento vertical */
-  justify-content: flex-start ; /* alinhamento horizontal */
+  align-items: center; 
+  justify-content: flex-start ; 
 }
 
 header .logo{
   margin-left: 5px;
   margin-right: 10px;
-
   /* color: var(--vermelho);
   font-family: 'Arial Black', Times;
   font-size: 40px; */
@@ -40,18 +38,16 @@ header nav a {
 }
 
 header nav a:hover {
-  color: rgba(255, 255, 255, 0.89);
+  color: #fff;
 }
 
 a {
   text-decoration: none;
 }
 
-
 /* filme principal */
-
 .filme-principal {  
-  background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url('/img/capa-emily.jpg');
+  background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url('../img/capa-emily.jpg');
 
   height: 550px;
   background-size: cover; /* imagem se alinha (cobre) a area da caixa */
@@ -64,16 +60,14 @@ a {
   /* justify-content e align-items sempre vão se posicionar dependendo da direção do flex-direction */
 }
 
+.filme-principal .titulo {
+  margin-top: 15%;
+}
+
 .filme-principal .descricao {
   margin-top: 10px;
   margin-bottom: 40px;
   font-size: 16px;
-}
-
-.filme-principal .titulo {
-  margin-top: 15%;
-  font-size: 50px;
-  font-family: 'Trebuchet MS', Arial, sans-serif;
 }
 
 .botao-play {
@@ -132,31 +126,51 @@ a {
   width: 70%;
 }
 
-/* carrosséis de filmes */
 
-.box-filme {
-  height: 100%;
-  width: 100%;
-  display: block;
-  border-radius: 3px;
-  transition: 0.5s;
-}
-
-.box-filme:hover {
-  transform: scale(1.2);
-}
-
+/* carrosséis de filmes e documentários */
 p {
   margin-bottom: 15px;
   color: rgb(189, 188, 188);
 }
 
 .carrossel-series {
-  margin-top: 25px;
-  margin-left: 25px;
+  margin: 25px 10px 0px 10px;
+}
+
+.carrossel-container {
+  display: flex;
+}
+
+.carrossel-container:focus .item,
+.carrossel-container:hover .item {
+  transform: translateX(-10%);
+}
+
+.carrossel-container .item:focus,
+.carrossel-container .item:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.item {
+  position: relative;
+  display: block;
+  margin: 0 4px;
+  flex: 1, 1, 0px;
+  transition: transform 500ms;
+}
+
+.item:hover ~ .item {
+  transform: translateX(10%);
+}
+
+.item img {
+  display: block;
+  max-width: 100%;
+  border-radius: 3px;
 }
 
 .carrossel-docs {
-  margin-top: 25px;
-  margin-left: 25px;
+  margin: 25px 10px 0px 10px;
 }
+
